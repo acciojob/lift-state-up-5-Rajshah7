@@ -1,11 +1,18 @@
 
-import React from "react";
+import React, { useState } from "react";
 import './../styles/App.css';
+import Display from "./Display";
 
 const App = () => {
+
+  const [isLoggedIn,setIsLoggedIn] = useState(false);
+
+  console.log(isLoggedIn,"isLoggedIn");
   return (
     <div>
-        {/* Do not remove the main div */}
+        <h1>Parent Component</h1>
+
+        <Display isLoggedIn={isLoggedIn} setIsLoggedIn={setIsLoggedIn}/>
     </div>
   )
 }
